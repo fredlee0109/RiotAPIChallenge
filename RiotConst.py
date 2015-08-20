@@ -1,9 +1,9 @@
 # @author: Fred Lee
 
 URL = {
-	'base': 'https://{proxy}.api.pvp.net/api/lol/{region}/{url}',
-	'summoner_by_name': 'v{version}/summoner/by-name/{summonerNames}',
-	# 'obs': ''
+	'base': 'https://{proxy}.api.pvp.net/{url}',
+	'summoner_by_name': 'api/lol/{region}/v{version}/summoner/by-name/{summonerNames}',
+	'obs': 'observer-mode/rest/featured'
 }
 
 #this will be the {version}

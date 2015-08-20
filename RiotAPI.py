@@ -17,7 +17,6 @@ class RiotAPI(object):
 		response = requests.get(
 			Consts.URL['base'].format(
 				proxy=self.region,
-				region=self.region,
 				url=api_url),
 			params=args
 			)
@@ -25,6 +24,7 @@ class RiotAPI(object):
 
 	def get_summoner_by_name(self, name):
 		api_url = Consts.URL['summoner_by_name'].format(
+			region=self.region,
 			version=Consts.API_VERSIONS['summoner'],
 			summonerNames=name
 			)
