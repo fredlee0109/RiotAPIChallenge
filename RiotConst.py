@@ -3,12 +3,14 @@
 URL = {
 	'base': 'https://{proxy}.api.pvp.net/{url}',
 	'summoner_by_name': 'api/lol/{region}/v{version}/summoner/by-name/{summonerNames}',
-	'obs': 'observer-mode/rest/featured'
+	'obs': 'observer-mode/rest/featured',
+	'static_champion': 'api/lol/static-data/{region}/v{version}/champion'
 }
 
 #this will be the {version}
 API_VERSIONS = { 
-	'summoner': '1.4'
+	'summoner': '1.4',
+	'static_champion': '1.2'
 }
 
 #this will be the {proxy}

@@ -5,8 +5,10 @@ import RiotConst as Consts
 
 class RiotAPI(object):
 
-	def __init__(self, api_key, region=Consts.REGIONS['north_america']):
+	def __init__(self, api_key, proxy=Consts.REGIONS['north_america'],
+				region=Consts.REGIONS['north_america']):
 		self.api_key = api_key
+		self.proxy = proxy
 		self.region = region
 
 	def _request(self, api_url, params=()):
@@ -16,17 +18,28 @@ class RiotAPI(object):
 				args[key] = value
 		response = requests.get(
 			Consts.URL['base'].format(
-				proxy=self.region,
+				proxy=self.proxy,
 				url=api_url),
 			params=args
 			)
 		return response.json()
+
+	def get_featured_game(self):
+		api_url = Consts.URL['obs']
+		return self._request(api_url)
 
 	def get_summoner_by_name(self, name):
 		api_url = Consts.URL['summoner_by_name'].format(
 			region=self.region,
 			version=Consts.API_VERSIONS['summoner'],
 			summonerNames=name
+			)
+		return self._request(api_url)
+
+	def get_champion_to_id(self):
+		api_url = Consts.URL['static_champion'].format(
+			region=self.region,
+			version=Consts.API_VERSIONS['static_champion']
 			)
 		return self._request(api_url)
 
