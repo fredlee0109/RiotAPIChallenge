@@ -1,1 +1,0 @@
-[["Flash", 22722], ["Ignite", 5126], ["Heal", 4666], ["Smite", 3970], ["Teleport", 3892], ["Exhaust", 3118], ["Mark", 2495], ["Ghost", 571], ["Barrier", 459], ["Clarity", 239], ["Cleanse", 132], ["Clairvoyance", 10]]

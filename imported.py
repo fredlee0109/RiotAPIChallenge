@@ -13,16 +13,16 @@ class imported(object):
 		banned_Champions = {}
 		picked_Champions = {}
 
-		with open('Data/summonerData.txt') as data_file:
+		with open('Data/summonerData.json') as data_file:
 			summoners = dict(json.load(data_file))
 		
-		with open('Data/bannedData.txt') as data_file:
+		with open('Data/bannedData.json') as data_file:
 			banned_Champions = dict(json.load(data_file))
 
-		with open('Data/pickedData.txt') as data_file:
+		with open('Data/pickedData.json') as data_file:
 			picked_Champions = dict(json.load(data_file))
 
-		with open('Data/spellData.txt') as data_file:
+		with open('Data/spellData.json') as data_file:
 			spells = dict(json.load(data_file))
 
 		self.summoners = summoners

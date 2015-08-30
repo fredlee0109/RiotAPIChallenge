@@ -32,7 +32,7 @@ def main():
 		21 : "Barrier", 1 : "Cleanse", 6 : "Ghost", 32 : "Mark", 13 : "Clarity", 2 : "Clairvoyance"
 	}
 	# # seconds * # minutes * # hours
-	t_end = time.time() + 60 * 60 * 8
+	t_end = time.time() + 60 * 1 * 1
 	while time.time() < t_end:
 		api = RiotAPI(API_KEY.key) 
 		r = api.get_featured_game()
@@ -65,13 +65,13 @@ def main():
 		time.sleep(60)
 
 
-	with open('Data/summonerData.txt', 'w') as outfile:
+	with open('Data/summonerData.json', 'w') as outfile:
 		json.dump(sorted(summoners.items(), key=lambda x: x[1], reverse=True), outfile)
-	with open('Data/bannedData.txt', 'w') as outfile:
+	with open('Data/bannedData.json', 'w') as outfile:
 		json.dump(sorted(banned_Champions.items(), key=lambda x: x[1], reverse=True), outfile)
-	with open('Data/pickedData.txt', 'w') as outfile:
+	with open('Data/pickedData.json', 'w') as outfile:
 		json.dump(sorted(picked_Champions.items(), key=lambda x: x[1], reverse=True), outfile)
-	with open('Data/spellData.txt', 'w') as outfile:
+	with open('Data/spellData.json', 'w') as outfile:
 		json.dump(sorted(spells.items(), key=lambda x: x[1], reverse=True), outfile)
 
 if __name__ == "__main__":
