@@ -10,7 +10,11 @@ table {
 	border: 3px solid #4682B4;
 	border-radius: 5px;
 }
-
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #61B329;
+}
 #category {
 	text-align: center;
 	color: #3366FF;
@@ -28,11 +32,14 @@ table {
     clear: both;
 }
 #sidebar {
+    font-family: 'Source Sans Pro', sans-serif;
     position: fixed;
     width: 140px;
     height: 100%;
     left: -140px;
     overflow: hidden;
+    margin-top: -10px;
+    margin-bottom: -10px;
     z-index: 10;
     background: white;
     border-right: 1px solid #CCC;
@@ -56,13 +63,13 @@ table {
     font-size: 22px;
     color: black;
     line-height: 24px;
-    font-weight: 600;
+    font-weight: normal;
 }
 .sidebar-category {
     margin-top: 20px;
     line-height: 25px;
     color: #555;
-    font-weight: 600;
+    font-weight: normal;
     font-size: 14px;
 }
 .sidebar-item {
@@ -74,11 +81,56 @@ table {
     -moz-transition: left 0.5s ease;
 }
 .sidebar-item:hover {
-    color: #61B329;
+    color: #00BFFF;
 }
 #more {
     height: 25px;
     position: fixed;
     bottom: 15px;
     left: 7px;
+}
+.icon {
+    height: 4%;
+    width: 4%;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+}
+.top {
+    text-align: center;
+    color: #3366FF;
+    font-weight: normal;
+    font-size: larger;
+    margin: auto;
+}
+#info {
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+.menu {
+    position: relative;
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    border: 2px dashed blue;
+    text-align: center;
+    margin-left: 10%;
+    margin-top: 20px;
+}
+.home {
+    position: relative;
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    border: 2px dashed blue;
+    text-align: center;
+    margin-left: 45%;
+    margin-right: 45%;
+    margin-top: 20px;
+}
+#special {
+    color: #20B2AA;
 }

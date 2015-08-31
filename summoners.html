@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<!--
+	Website to visualize Glories of Featured Games, an entry for Riot's API Challenge
+-->
+<html>
+	<head>
+		<title>Glories of Feautred  Games </title>
+		<link rel="stylesheet" type="text/css" rel="stylesheet" href="css/common.css"/>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+		<script>
+			$(function() {
+				$.getJSON('Data/summonerData.json', function(data) {
+					var tr;
+					var total = 0;
+					for (var i = 0; i < 50; i++) {
+						tr = $('<tr/>');
+				        tr.append("<td>" + data[i][0] + "</td>");
+				        tr.append("<td>" + data[i][1] + "</td>");
+				        $('#summoners').append(tr);
+					}
+			    });
+			});
+		</script>
+	</head>
+	<body>
+		<div id="sidebar">
+            <div id="sidebar-content">
+                <div class="sidebar-name">Fred Lee</div>
+                <div class="sidebar-category">ABOUT</div>
+                <a href="index.html">
+                    <div class="sidebar-item">Home</div>
+                </a>
+                <a href="work.html">
+                    <div class="sidebar-item">Work</div>
+                </a>
+                <a href="projects.html">
+                    <div class="sidebar-item">Projects</div>
+                </a>
+                <a href="organizations.html">
+                    <div class="sidebar-item">Organizations</div>
+                </a>
+                <div id="more">
+                    <img src="img/more.svg">
+                </div>
+            </div>
+        </div>
+        <p class="top"> <img class="icon" src="img/icon.png"/> Glories of Featured Games </p>
+		<p id="category"> Top 50 Featured Summoners </p>
+		<table id="summoners" border="2" cellspacing="5">
+			<tr>
+				<th> Summoner </th>
+				<th> Count </th>
+			</tr>
+		</table>
+		<a href="riot.html"> <div class="home"> <p id="special"> Home <p> </div> </a>
+	</body>
+</html>
